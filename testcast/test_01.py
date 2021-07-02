@@ -1,20 +1,28 @@
+import allure
 import pytest
 
-def test_one():
-    print("正在执行----test_one")
-    x = "this111"
-    assert 'h' in x
+@pytest.fixture(scope="session")
+def login():
+    print("用例先登录")
 
-def test_two():
-    print("正在执行----test_two")
-    x = "hello"
-    assert x
+@allure.step("步骤1")
+def step_1():
+    print("111")
 
-def test_three():
-    print("正在执行----test_three")
-    a = "hello"
-    b = "hello world"
-    assert a in b
+@allure.step("步骤2")
+def step_2():
+    print("222")
 
-if __name__ == "__main__":
-    pytest.main(["-s", "test_01.py"])
+@allure.feature("编辑页面")
+class TestEditPage():
+    '''编辑页面'''
+
+    @allure.story("这是一个xxxx用例")
+    def test_1(self,login):
+        step_1()
+        step_2()
+        print("xxxxx")
+
+    @allure.story("这是一个yyy用例")
+    def test_2(self,login):
+        print("yyy")
