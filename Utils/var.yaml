@@ -1,0 +1,12 @@
+login:
+  username: gujing01
+  password: b9b0a6e0d41853e4174b150d2e79381d8afd8398b76b19e9145a0d5a2cea819d
+
+sql:
+  host: 192.168.10.166
+  user: root
+  passwd: ikasinfo123
+  db: xinda-mes-sit
+
+params:
+  fileType: 文档类型

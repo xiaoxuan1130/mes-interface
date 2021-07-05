@@ -1,0 +1,4 @@
+mes-url:  http://192.168.10.166:8000
+mes-api-login:  /api/v1.0/login
+mes-api-categories: /api/v1.0/categories
+mes-api-doc_category: /api/v1.0/doc_category
