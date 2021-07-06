@@ -17,11 +17,11 @@ class TestDocumentType():
         Dbutils().deleteFileType(value)
 
     @allure.story("获取文档类别")
-    def test01_get(self,login):
+    def test_01_get(self,login):
         Common(login).getItem(url)
 
     @allure.story("新增文档类别")
-    def test02_add(self,login):
+    def test_02_add(self,login):
         global value
         value = login.split("==")[1]
         payload={"name": ReadYaml.readYamlByValue("params","fileType",value), "script": "script_"+value}
