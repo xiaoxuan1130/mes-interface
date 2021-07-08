@@ -20,7 +20,8 @@ def login():
     r = s.post(url, json=payload)
     log.logger.info("返回数据:%s" %r.json())
     token=r.json().get("data").get("token")
-    value=DateUtils().getTime()
+    #value="_"+DateUtils().getTime()
+    value="_2_0708_1"
     return token+"=="+value
 
 def pytest_collection_modifyitems(items):
